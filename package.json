@@ -2,11 +2,12 @@
   "name": "cheggle",
   "version": "1.0.0",
   "description": "checkbox + toggle = cheggle",
-  "main": "./app/index.js",
+  "main": "./build/cheggle.js",
   "scripts": {
-    "wp": "webpack -p --progress --colors",
-    "wpd": "webpack --progress --colors",
-    "wps": "webpack-dev-server --progress --inline --hot --history-api-fallback"
+    "build": "./node_modules/.bin/babel app/cheggle.jsx -o build/cheggle.js -s",
+    "wp": "./node_modules/.bin/webpack -p --progress --colors",
+    "wpd": "./node_modules/.bin/webpack --progress --colors",
+    "wps": "./node_modules/.bin/webpack-dev-server --progress --inline --hot --history-api-fallback"
   },
   "author": "Moe Szyslak <moe.duffdude@gmail.com>",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "react-dom": "^0.14.7"
   },
   "devDependencies": {
+    "babel-cli": "^6.10.1",
     "babel-core": "^6.6.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
