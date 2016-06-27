@@ -9,7 +9,11 @@
     "wpd": "./node_modules/.bin/webpack --progress --colors",
     "wps": "./node_modules/.bin/webpack-dev-server --progress --inline --hot --history-api-fallback"
   },
-  "author": "Moe Szyslak <moe.duffdude@gmail.com>",
+  "author": {
+    "email": "moe.duffdude@gmail.com",
+    "name": "Moe Szyslak"
+  },
+  "keywords": ["cheggle", "checkbox", "toggle", "react-component"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/moe-szyslak/cheggle/issues"
