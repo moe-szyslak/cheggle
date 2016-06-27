@@ -1,5 +1,7 @@
 ## Checkbox + Toggle = Cheggle™
 
+![Cheggle](http://i.imgur.com/AI6LLo5.jpg "Cheggle")
+
 React Component that displays a checkbox or a toggle depending on the platform.
 
 *Most* of Cheggle styling taken from ionic framework with minor tweaks.
