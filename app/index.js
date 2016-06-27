@@ -14,8 +14,8 @@ class App extends Component {
     };
   }
 
-  handleChange(newVal) {
-    console.log(newVal);
+  handleChange(value) {
+    this.setState({ cheggle: value });
   }
 
   handleSelectChange(e) {
@@ -42,12 +42,12 @@ class App extends Component {
         <input
           type="checkbox"
           value={this.state.watchPlatform}
-          defaultChecked={this.state.watchPlatform}
+          checked={this.state.watchPlatform}
           onChange={(e) => this.handlePlatformChange(e)}
         />
 
         <Cheggle
-          defaultValue={this.state.cheggle}
+          value={this.state.cheggle}
           platform={this.state.platform}
           watchPlatform={this.state.watchPlatform}
           onChange={(e) => this.handleChange(e)}

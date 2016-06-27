@@ -2,13 +2,6 @@ import React, { PropTypes, Component } from 'react';
 import platform from 'platform';
 
 class Cheggle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cheggle: props.defaultValue,
-    };
-  }
-
   componentDidMount() {
     // this makes sure our style is injected in the head (once)
     if (document.querySelector('style#cheggle') === null) {
@@ -196,9 +189,8 @@ left: 3px;}`;
     }
   }
 
-  handleChange() {
-    this.setState({ cheggle: !this.state.cheggle });
-    this.props.onChange(!this.state.cheggle);
+  handleChange(e) {
+    this.props.onChange(!(e.target.value === 'true'));
   }
 
   render() {
@@ -229,8 +221,8 @@ left: 3px;}`;
       <label ref="cheggleLabel">
         <input
           type="checkbox"
-          defaultChecked={this.props.defaultValue}
-          value={this.state.cheggle}
+          value={this.props.value}
+          checked={this.props.value}
           onChange={(e) => this.handleChange(e)}
           disabled={this.props.disabled}
         />
@@ -245,14 +237,14 @@ left: 3px;}`;
 Cheggle.propTypes = {
   onChange: PropTypes.func.isRequired,
   platform: PropTypes.string,
-  defaultValue: PropTypes.bool,
+  value: PropTypes.bool,
   watchPlatform: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
 Cheggle.defaultProps = {
   platform: 'auto',
-  defaultValue: false,
+  value: false,
   watchPlatform: false,
   disabled: false,
 };
