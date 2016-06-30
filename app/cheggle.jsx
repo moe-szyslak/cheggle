@@ -10,6 +10,9 @@ class Cheggle extends Component {
       cheggle.type = 'text/css';
       cheggle.innerHTML =
 `
+html {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 .cheggle {
 position: relative;
 display: inline-block;
